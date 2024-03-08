@@ -11,7 +11,7 @@
   &__burger {
     position: absolute;
     right: 0;
-    top: 8px;
+    top: 0.5rem;
     width: 32px;
     height: 4px;
     background: set-text-color($primary-color);
@@ -40,6 +40,14 @@
     &.open {
       transform: rotate(720deg);
       background: transparent;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 8px);
+      }
+      &::after {
+        width: 32px;
+        transform: rotate(-45deg) translate(3px, -7px);
+      }
     }
   }
 }

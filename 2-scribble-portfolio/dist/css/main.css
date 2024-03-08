@@ -37,7 +37,7 @@
 .menu-btn__burger {
   position: absolute;
   right: 0;
-  top: 8px;
+  top: 0.5rem;
   width: 32px;
   height: 4px;
   background: #fff;
@@ -64,6 +64,13 @@
 .menu-btn__burger.open {
   transform: rotate(720deg);
   background: transparent;
+}
+.menu-btn__burger.open::before {
+  transform: rotate(45deg) translate(5px, 8px);
+}
+.menu-btn__burger.open::after {
+  width: 32px;
+  transform: rotate(-45deg) translate(3px, -7px);
 }
 
 body {
