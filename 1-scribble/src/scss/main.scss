@@ -1,0 +1,62 @@
+@import "./resets";
+@import "./variables";
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background-color: lighten($primary-color, 100%);
+    color: darken($text-color, 100%);
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+body {
+  background-color: $primary-color;
+  color: $text-color;
+}
+
+.main {
+  @include flexCenter(row);
+  width: 80% - 20%; //sadece ayni turlerde islem yapilabilir
+  margin: 0 auto;
+
+  // #{} donusturulen css dosyasinda .main .main__paragraph sekilinde tanimlanmasini sagliyor.
+  #{&}__paragraph1 {
+    font-weight: weight(bold);
+
+    &:hover {
+      color: skyblue;
+    }
+  }
+
+  #{&}__paragraph2 {
+    @extend .main__paragraph1; //  main__paragraph1 ile ayni stilleri alir.
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+.light {
+  @include theme($light-theme: true); // $light-theme is optional
+}
