@@ -312,6 +312,34 @@
   .nav .menu-nav__link {
     font-size: 1.5rem;
   }
+  .about__bio {
+    font-size: 1.5rem;
+  }
+  .projects__bio-image {
+    height: 40vh;
+  }
+  .projects__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects .text-secondary {
+    font-size: 3rem;
+  }
+  .contact__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .projects__items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .projects .text-secondary {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .contact__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 body {
   background: #272727;
