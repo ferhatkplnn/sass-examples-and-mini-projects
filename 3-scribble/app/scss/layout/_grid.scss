@@ -1,4 +1,5 @@
 @use "../util/" as u; // u olarak isimlendirmeseydik, kendinisi otomatik util olarak isimlendirecekti.
+// @use "../util/" as *; butun  modulleri import etmek istedigimizde bunu kullan ve yeni bir isimle atamayacagiz.
 
 // %widget {
 //   margin: 0.5rem;
