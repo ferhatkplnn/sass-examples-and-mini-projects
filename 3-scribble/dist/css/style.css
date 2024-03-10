@@ -63,8 +63,8 @@ a:active {
     grid-template-rows: auto;
   }
 }
-.grid__main, .grid__sidebar {
-  padding: 40px;
+.grid__main {
+  padding: 1rem;
 }
 .grid__main {
   background-color: rgb(0, 125, 174);
@@ -76,14 +76,27 @@ a:active {
 }
 @media (min-width: 56.25em) {
   .grid__main {
-    background-color: hsl(39, 100%, 50%);
+    background-color: hsl(39, 100%, 40%);
   }
-}
-.grid__sidebar {
-  background-color: rgb(176, 6, 176);
 }
 @media (max-width: 43.7485em) {
   .grid__sidebar {
     text-align: center;
   }
+}
+.grid__widget {
+  margin: 0.5rem;
+  padding: 1rem;
+}
+.grid__widget--megenta {
+  background-color: hsl(300, 93%, 36%);
+}
+.grid__widget--green {
+  background: hsl(120, 100%, 29%);
+}
+.grid__widget:first-child {
+  margin-top: 0;
+}
+.grid__widget:last-child {
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
