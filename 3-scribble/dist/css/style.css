@@ -94,6 +94,9 @@ a:active {
 .grid__widget--green {
   background: hsl(120, 100%, 29%);
 }
+.grid__widget.red {
+  background: hsl(350, 100%, 29%);
+}
 .grid__widget:first-child {
   margin-top: 0;
 }

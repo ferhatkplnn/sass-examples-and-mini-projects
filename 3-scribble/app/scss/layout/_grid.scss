@@ -58,6 +58,13 @@
       background: hsl(120, 100%, 29%);
     }
 
+    &.red {
+      // @extend .grid__widget;
+      // @extend #{$widget};
+      // @extend %widget;
+      background: hsl(350, 100%, 29%);
+    }
+
     &:first-child {
       margin-top: 0;
     }
