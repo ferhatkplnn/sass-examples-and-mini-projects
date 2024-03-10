@@ -1,0 +1,71 @@
+@import "variables";
+@import "functions";
+@import "mixin";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding: 20px;
+  background: $bg-dark;
+
+  h1 {
+    color: white;
+    text-align: center;
+  }
+}
+
+.section {
+  padding: 30px;
+
+  &-a {
+    background: $bg-light;
+    color: set-text-color($bg-light);
+  }
+
+  &-b {
+    @include bg-light;
+  }
+}
+
+.btn {
+  display: inline-block;
+  color: $text-light;
+  background-color: $bg-dark;
+  text-decoration: none;
+  width: 200px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 20px;
+
+  &:hover {
+    filter: brightness(135%);
+  }
+}
+
+%btn-shared {
+  display: inline-block;
+  text-decoration: none;
+  width: 200px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 20px;
+}
+
+.btn {
+  &-light {
+    @extend %btn-shared;
+    background: $bg-light;
+    color: $bg-dark;
+  }
+
+  &-dark {
+    @extend %btn-shared;
+    background: $bg-dark;
+    color: $bg-light;
+    color: $text-light;
+  }
+}
