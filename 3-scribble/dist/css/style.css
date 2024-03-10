@@ -60,10 +60,20 @@ a:active {
 .grid__main {
   background-color: rgb(0, 125, 174);
 }
+@media (min-width: 43.75em) {
+  .grid__main {
+    background-color: hsl(120, 100%, 15%);
+  }
+}
+@media (min-width: 56.25em) {
+  .grid__main {
+    background-color: hsl(39, 100%, 50%);
+  }
+}
 .grid__sidebar {
   background-color: rgb(176, 6, 176);
 }
-@media (max-width: 56.25em) {
+@media (max-width: 43.7485em) {
   .grid__sidebar {
     text-align: center;
   }
